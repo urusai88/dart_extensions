@@ -14,8 +14,7 @@ extension ListExtensions<T> on List<T> {
       throw StateError('List.length < $count');
     }
 
-    // ignore: prefer_collection_literals
-    final result = List<T>();
+    final result = <T>[];
     var pool = List<T>.of(this);
 
     for (var i = 0; i < count; ++i) {
