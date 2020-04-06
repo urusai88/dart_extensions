@@ -23,6 +23,6 @@ extension ListExtensions<T> on List<T> {
       pool.removeAt(idx);
     }
 
-    return result;
+    return result as List<T>;
   }
 }
