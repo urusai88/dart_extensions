@@ -14,7 +14,8 @@ extension ListExtensions<T> on List<T> {
       throw StateError('List.length < $count');
     }
 
-    final result = [];
+    // ignore: prefer_collection_literals
+    final result = List<T>();
     var pool = List<T>.of(this);
 
     for (var i = 0; i < count; ++i) {
@@ -23,6 +24,6 @@ extension ListExtensions<T> on List<T> {
       pool.removeAt(idx);
     }
 
-    return result as List<T>;
+    return result;
   }
 }
