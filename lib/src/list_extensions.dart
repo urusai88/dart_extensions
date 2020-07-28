@@ -25,4 +25,17 @@ extension ListExtensions<T> on List<T> {
 
     return result;
   }
+
+  void insertBetween(T element) {
+    if (length < 2) return;
+
+    for (var i = length - 1; i > 1; i--) {
+      insert(i - 1, element);
+    }
+  }
+
+  List<T> insertBetweenReturn(T element) {
+    insertBetween(element);
+    return this;
+  }
 }
