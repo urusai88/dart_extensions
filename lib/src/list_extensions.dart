@@ -29,7 +29,7 @@ extension ListExtensions<T> on List<T> {
   void insertBetween(T element) {
     if (length < 2) return;
 
-    for (var i = length - 1; i > 1; i--) {
+    for (var i = length; i > 1; i--) {
       insert(i - 1, element);
     }
   }
